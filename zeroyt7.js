@@ -1,12 +1,12 @@
-//NEW BASE BY ZERO YT7
+//NEW BASE BY PutraBotz
 //RECODE SESUKA HATIMU JANGAN HPUS CREATOR NYA
 //MAAF BASE NYA JELEK
 
 //FOLLOW ALL SOSIAL MEDIAML ME
-//YOUTUBE : Zero YT7
-//INSTAGRAM : @Zero_YT7
-//TIKTOK : @_zeroyt7
-//GITHUB : Zero-YT7
+//YOUTUBE : PutraBotz
+//INSTAGRAM : @PutraBotz
+//TIKTOK : @_PutraBotz
+//GITHUB : PutraBotz
 
 let { fetchJson, kyun, fetchText } = require('./lib/fetcher')
 let { color, bgcolor } = require('./lib/color')
@@ -57,7 +57,7 @@ ownername = setting.OwnerName
 
 //━━━━━━━━━━━━━━━[ MODUL EXPORTS ]━━━━━━━━━━━━━━━━━//
 
-module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
+module.exports = PutraBotz = async (PutraBotz, mek, _welkom) => {
 	try {
         if (!mek.hasNewMessage) return
         mek = mek.messages.all()[0]
@@ -80,12 +80,12 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
 		let q = args.join(' ')
 		let Verived = "0@s.whatsapp.net"
 		let txt = mek.message.conversation
-		let botNumber = zeroyt7.user.jid
-		let ownerNumber = [`${owner}@s.whatsapp.net`, `6285157740529@s.whatsapp.net`]
+		let botNumber = PutraBotz.user.jid
+		let ownerNumber = [`${owner}@s.whatsapp.net`, `6285783026012@s.whatsapp.net`]
 		let isGroup = from.endsWith('@g.us')
 		let sender = isGroup ? mek.participant : mek.key.remoteJid
-		let totalchat = await zeroyt7.chats.all()
-		let groupMetadata = isGroup ? await zeroyt7.groupMetadata(from) : ''
+		let totalchat = await PutraBotz.chats.all()
+		let groupMetadata = isGroup ? await PutraBotz.groupMetadata(from) : ''
 		let groupName = isGroup ? groupMetadata.subject : ''
 		let groupId = isGroup ? groupMetadata.jid : ''
 		let groupMembers = isGroup ? groupMetadata.participants : ''
@@ -94,8 +94,8 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
 		let groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 		let isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 		let isGroupAdmins = groupAdmins.includes(sender) || false
-		let conts = mek.key.fromMe ? zeroyt7.user.jid : zeroyt7.contacts[sender] || { notify: jid.replace(/@.+/, '') }
-        let pushname = mek.key.fromMe ? zeroyt7.user.name : conts.notify || conts.vname || conts.name || '-'
+		let conts = mek.key.fromMe ? PutraBotz.user.jid : PutraBotz.contacts[sender] || { notify: jid.replace(/@.+/, '') }
+        let pushname = mek.key.fromMe ? PutraBotz.user.name : conts.notify || conts.vname || conts.name || '-'
         
 		let isAntiLink = isGroup ? _antilink.includes(from) : false
 		let isWelkom = isGroup ? _welkom.includes(from) : false
@@ -108,7 +108,7 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
 
 		mess = {
 			wait: 'Sabar Lagi Proses Tod...!',
-			success: 'Done Jangan Lupa Subscribe Zero YT7',
+			success: 'Done Jangan Lupa Subscribe PutraBotz',
 			error: {
 				stick: 'Gagal Convert Gambar To Sticker...Coba Lagi !',
 				Iv: 'Linknya Error Tod !'
@@ -118,22 +118,22 @@ module.exports = zeroyt7 = async (zeroyt7, mek, _welkom) => {
 				group: 'Khusus Group Tod !'
 			}
 		}
-		faketeks = 'Zero YT7'
+		faketeks = 'PutraBotz'
 		let isUrl = (url) => {
         return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%.+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%+.~#?&/=]*)/, 'gi'))
         }
         let reply = (teks) => {
-            zeroyt7.sendMessage(from, teks, text, {quoted:mek})
+            PutraBotz.sendMessage(from, teks, text, {quoted:mek})
         }
         let sendMess = (hehe, teks) => {
-            zeroyt7.sendMessage(hehe, teks, text)
+            PutraBotz.sendMessage(hehe, teks, text)
         }
         let mentions = (teks, memberr, id) => {
-            (id == null || id == undefined || id == false) ? zeroyt7.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : zeroyt7.sendMessage(from, teks.trim(), extendedText, { quoted: ftrol, contextInfo: { "mentionedJid": memberr } })
+            (id == null || id == undefined || id == false) ? PutraBotz.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : PutraBotz.sendMessage(from, teks.trim(), extendedText, { quoted: ftrol, contextInfo: { "mentionedJid": memberr } })
         }
-        let zero = fs.readFileSync ('./zeroyt7/zerothumb.jpg')
+        let zero = fs.readFileSync ('./PutraBotz/zerothumb.jpg')
         let costum = (pesan, tipe, target, target2) => {
-			zeroyt7.sendMessage(from, pesan, tipe, { quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` } } })
+			PutraBotz.sendMessage(from, pesan, tipe, { quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` } } })
 		}
 		let runtime = function (seconds) {
   seconds = Number(seconds);
@@ -186,12 +186,12 @@ var ase = new Date();
                 buttons: but,
                 headerType: 1
             }
-            zeroyt7.sendMessage(from, buttonMessages, buttonsMessage, {
+            PutraBotz.sendMessage(from, buttonMessages, buttonsMessage, {
                 quoted: ftrol
             })
         }
         let sendButImage = async (from, context, fortext, img, but, mek) => {
-            jadinya = await zeroyt7.prepareMessage(from, img, image)
+            jadinya = await PutraBotz.prepareMessage(from, img, image)
             buttonMessagesI = {
                 imageMessage: jadinya.message.imageMessage,
                 contentText: context,
@@ -199,18 +199,18 @@ var ase = new Date();
                 buttons: but,
                 headerType: 4
             }
-            zeroyt7.sendMessage(from, buttonMessagesI, buttonsMessage, {
+            PutraBotz.sendMessage(from, buttonMessagesI, buttonsMessage, {
                 quoted: ftrol,
             })
         }
         async function sendButLocation(id, text1, desc1, gam1, but = [], options = {}) {
             let buttonMessages = { locationMessage: { jpegThumbnail: gam1 }, contentText: text1, footerText: desc1, buttons: but, headerType: 6 }
-            return zeroyt7.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+            return PutraBotz.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
         }
 
 //━━━━━━━━━━━━━━━[ FAKE FAKEAN ]━━━━━━━━━━━━━━━━━//
         let fakestatus = (teks) => {
-            zeroyt7.sendMessage(from, teks, text, {
+            PutraBotz.sendMessage(from, teks, text, {
                 quoted: {
                     key: {
                         fromMe: false,
@@ -229,16 +229,16 @@ var ase = new Date();
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./zeroyt7/zero.jpg'),
+                            "jpegThumbnail": fs.readFileSync('./PutraBotz/zero.jpg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     }
                 }
             })
         }
-        zeroyt7.chatRead(from, "read")
+        PutraBotz.chatRead(from, "read")
         let fakegroup = (teks) => {
-            zeroyt7.sendMessage(from, teks, text, {
+            PutraBotz.sendMessage(from, teks, text, {
                 quoted: {
                     key: {
                         fromMe: false,
@@ -257,7 +257,7 @@ var ase = new Date();
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./zeroyt7/zero.jpg'),
+                            "jpegThumbnail": fs.readFileSync('./PutraBotz/zero.jpg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     }
@@ -273,8 +273,8 @@ var ase = new Date();
                             itemCount : 123,
                             status: 1,
                             surface : 1,
-                            message: `SUBSCRIBE ZERO YT7`, 
-                            orderTitle: `SUBSCRIBE ZERO YT7`,
+                            message: `SUBSCRIBE PutraBotz`, 
+                            orderTitle: `SUBSCRIBE PutraBotz`,
                             thumbnail: zero, //Gambarnye
                             sellerJid: '0@s.whatsapp.net' 
                           }
@@ -296,7 +296,7 @@ var ase = new Date();
                     let asw = './stik' + names + '.webp'
                     exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
                         let media = fs.readFileSync(asw)
-                        zeroyt7.sendMessage(to, media, MessageType.sticker,{quoted:mek})
+                        PutraBotz.sendMessage(to, media, MessageType.sticker,{quoted:mek})
                         fs.unlinkSync(filess)
                         fs.unlinkSync(asw)
                     });
@@ -326,7 +326,7 @@ var ase = new Date();
                     if(mime.split("/")[0] === "audio"){
                         mime = Mimetype.mp4Audio
                     }
-                    zeroyt7.sendMessage(to, media, type, { quoted: ftrol, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
+                    PutraBotz.sendMessage(to, media, type, { quoted: ftrol, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
                     
                     fs.unlinkSync(filename)
                 });
@@ -338,7 +338,7 @@ if (isGroupAdmins) return
 var kic = `${sender.split("@")[0]}@s.whatsapp.net`
 reply(` *「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup :(`)
 setTimeout(() => {
-zeroyt7.groupRemove(from, [kic]).catch((e) => { reply(`BOT HARUS JADI ADMIN`) })
+PutraBotz.groupRemove(from, [kic]).catch((e) => { reply(`BOT HARUS JADI ADMIN`) })
 }, 0)
 }
 
@@ -349,7 +349,7 @@ if (isGroupAdmins) return
 reply('Tandai telah dibaca\n'.repeat(300))
 reply(`「 *VIRTEX DETECTOR* 」\n\nKamu mengirimkan virtex, maaf kamu di kick dari group :(`)
 console.log(color('[KICK]', 'red'), color('Received a virus text!', 'yellow'))
-zeroyt7.groupRemove(from, [sender])
+PutraBotz.groupRemove(from, [sender])
 }     
 if (isCmd && !isUser){
           pendaftar.push(sender)
@@ -373,7 +373,7 @@ if (isCmd && !isUser){
 
 switch (command) {
 	case 'menu':
-	gambar = fs.readFileSync('./zeroyt7/zero.jpg')
+	gambar = fs.readFileSync('./PutraBotz/zero.jpg')
                    timestamp = speed();
 				latensi = speed() - timestamp	
               menunya = 
@@ -427,7 +427,7 @@ Saya ${botname} Yg Siap Membantu Anda Dalam Kinerja Whatsapp Agar Mempermudah Se
 │ あ ${prefix}report
 └⬣`
 teks =
-`Ini Base Buatan Zero YT7 Silahkan Di Pake Jika Ingin Recode Atau Reupload Tolong Creator Jangan Hpus Tolong Hargai Karya Orang 🙏`
+`Ini Base Buatan PutraBotz Silahkan Di Pake Jika Ingin Recode Atau Reupload Tolong Creator Jangan Hpus Tolong Hargai Karya Orang 🙏`
 but = [
           { buttonId: `${prefix}infobot`, buttonText: { displayText: '☰ INFO' }, type: 1 },
           { buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 }
@@ -439,7 +439,7 @@ timestamp = speed();
 				latensi = speed() - timestamp
                   	teks =
 `┏━➤ *INFO BOT* 
-*┃┃* Creator Bot : Zero YT7
+*┃┃* Creator Bot : PutraBotz
 *┃┃* Nama Owner : ${ownername}
 *┃┃* Nama Bot : ${botname}
 *┃┃* Prefix : Multi Prefix
@@ -450,14 +450,14 @@ timestamp = speed();
 *┃┗━━━━━━━━*
 *┃◗ Thanks To Allah S.W.T*
 *┃◗ Thank To Ortu*
-*┃◗ Thank To Zero YT7 (Creator)*
+*┃◗ Thank To PutraBotz (Creator)*
 *┃◗ Thanks To All Subscriberku*
 *┗━━━━━━━ •*`
                   but = [
           { buttonId: `${prefix}owner`, buttonText: { displayText: '☰ OWNER' }, type: 1 },
           { buttonId: `${prefix}sc`, buttonText: { displayText: '☰ SCRIPT' }, type: 1 }
         ]
-        sendButton(from, teks, '©Created : Zero YT7', but, mek)
+        sendButton(from, teks, '©Created : PutraBotz', but, mek)
 break
 	
 //━━━━━━━━━━━━━━━[ FITUR GROUP ]━━━━━━━━━━━━━━━━━//
@@ -561,21 +561,21 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 reply(`\`\`\`✓Sukses Membuka Group\`\`\` *${groupMetadata.subject}*`)
-zeroyt7.groupSettingChange(from, GroupSettingChange.messageSend, false)
+PutraBotz.groupSettingChange(from, GroupSettingChange.messageSend, false)
 break
 case 'grouptutup' :
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
 reply(`\`\`\`✓Sukses Menutup Group\`\`\` *${groupMetadata.subject}*`)
-zeroyt7.groupSettingChange(from, GroupSettingChange.messageSend, true)
+PutraBotz.groupSettingChange(from, GroupSettingChange.messageSend, true)
 break
 case 'linkgrup' :
 if (!isGroup) return reply(mess.only.group)
 if (!isBotGroupAdmins) return reply("Bot Bukan Admin :)")
-linkgc = await zeroyt7.groupInviteCode(from)
+linkgc = await PutraBotz.groupInviteCode(from)
 yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
-zeroyt7.sendMessage(from, yeh, text, { quoted: ftrol })
+PutraBotz.sendMessage(from, yeh, text, { quoted: ftrol })
 break
 case 'promote' :
 if (!isGroup) return reply(mess.only.group)
@@ -589,10 +589,10 @@ for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
-zeroyt7.groupMakeAdmin(from, mentioned)
+PutraBotz.groupMakeAdmin(from, mentioned)
 } else {
 mentions(`Perintah di terima, @${mentioned[0].split('@')[0]} Kamu Menjadi Admin Di Group *${groupMetadata.subject}*`, mentioned, true)
-zeroyt7.groupMakeAdmin(from, mentioned)
+PutraBotz.groupMakeAdmin(from, mentioned)
 }
 break
 case 'demote' :
@@ -607,10 +607,10 @@ for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
-zeroyt7.groupDemoteAdmin(from, mentioned)
+PutraBotz.groupDemoteAdmin(from, mentioned)
 } else {
 mentions(`Perintah di terima, Menurunkan : @${mentioned[0].split('@')[0]} Menjadi Member`, mentioned, true)
-zeroyt7.groupDemoteAdmin(from, mentioned)
+PutraBotz.groupDemoteAdmin(from, mentioned)
 }
 break
 case 'add' :
@@ -621,7 +621,7 @@ if (args.length < 1) return reply('Yang mau di add siapa??')
 if (args[0].startsWith('08')) return reply('Gunakan kode negara Gan')
 try {
 num = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
-zeroyt7.groupAdd(from, [num])
+PutraBotz.groupAdd(from, [num])
 } catch (e) {
 console.log('Error :', e)
 reply('Gagal menambahkan target, mungkin karena di private')
@@ -639,10 +639,10 @@ for (let _ of mentioned) {
 teks += `@${_.split('@')[0]}\n`
 }
 mentions(teks, mentioned, true)
-zeroyt7.groupRemove(from, mentioned)
+PutraBotz.groupRemove(from, mentioned)
 } else {
 mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, mentioned, true)
-zeroyt7.groupRemove(from, mentioned)
+PutraBotz.groupRemove(from, mentioned)
 }
 break
 case 'tagall':
@@ -662,22 +662,22 @@ case 'setname':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-zeroyt7.groupUpdateSubject(from, `${body.slice(9)}`)
-zeroyt7.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
+PutraBotz.groupUpdateSubject(from, `${body.slice(9)}`)
+PutraBotz.sendMessage(from, `\`\`\`✓Sukses Mengganti Nama Group Menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: ftrol })
 break
 case 'setdesc':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-zeroyt7.groupUpdateDescription(from, `${body.slice(9)}`)
-zeroyt7.sendMessage(from, `\`\`\`✓Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
+PutraBotz.groupUpdateDescription(from, `${body.slice(9)}`)
+PutraBotz.sendMessage(from, `\`\`\`✓Sukses Mengganti Deskripsi Group\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: ftrol })
 break
 case 'setpp':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-media = await zeroyt7.downloadAndSaveMediaMessage(mek, './database/media_user')
-await zeroyt7.updateProfilePicture(from, media)
+media = await PutraBotz.downloadAndSaveMediaMessage(mek, './database/media_user')
+await PutraBotz.updateProfilePicture(from, media)
 reply(mess.wait)
 reply(`\`\`\`✓Sukses Mengganti Profil Group\`\`\` *${groupMetadata.subject}*`)
 break
@@ -686,7 +686,7 @@ if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 var value = body.slice(9)
-var group = await zeroyt7.groupMetadata(from)
+var group = await PutraBotz.groupMetadata(from)
 var member = group['participants']
 var mem = []
 member.map(async adm => {
@@ -697,7 +697,7 @@ text: value,
 contextInfo: { mentionedJid: mem },
 quoted: ftrol
 }
-zeroyt7.sendMessage(from, options, text)
+PutraBotz.sendMessage(from, options, text)
 break
 
 //━━━━━━━━━━━━━━━[ FITUR STICKER ]━━━━━━━━━━━━━━━━━//
@@ -705,14 +705,14 @@ break
 case 'attp':
 if (args.length == 0) return reply(`Example: ${prefix + command} Hai`)
 buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
-zeroyt7.sendMessage(from, buffer, sticker, { quoted: ftrol })
+PutraBotz.sendMessage(from, buffer, sticker, { quoted: ftrol })
 break
 case 'sticker':
 case 'stiker':
 case 's':
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-let media = await zeroyt7.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+let media = await PutraBotz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
 ran = getRandom('.webp')
 await ffmpeg(`./${media}`)
 .input(media)
@@ -727,7 +727,7 @@ reply(mess.error.stick)
 .on('end', function () {
 console.log('Finish')
 buffer = fs.readFileSync(ran)
-costum(buffer, sticker, Verived, `Jangan Lupa Subscribe Zero YT7`)
+costum(buffer, sticker, Verived, `Jangan Lupa Subscribe PutraBotz`)
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -736,7 +736,7 @@ fs.unlinkSync(ran)
 .save(ran)
 } else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
 let encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-let media = await zeroyt7.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+let media = await PutraBotz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
 ran = getRandom('.webp')
 reply(mess.wait)
 await ffmpeg(`./${media}`)
@@ -761,7 +761,7 @@ fs.unlinkSync(ran)
 .save(ran)
 } else if ((isMedia || isQuotedImage) && args[0] == 'nobg') {
 let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-let media = await zeroyt7.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+let media = await PutraBotz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
 ranw = getRandom('.webp')
 ranp = getRandom('.png')
 reply(mess.wait)
@@ -775,7 +775,7 @@ if (err) return reply('Gagal, Terjadi kesalahan, silahkan coba beberapa saat lag
 exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
 fs.unlinkSync(ranp)
 if (err) return reply(mess.error.stick)
-zeroyt7.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: ftrol })
+PutraBotz.sendMessage(from, fs.readFileSync(ranw), sticker, { quoted: ftrol })
 fs.unlinkSync(ranw)
 })
 })
@@ -786,28 +786,28 @@ break
 case 'toimg':
 if (!isQuotedSticker) return reply(' reply stickernya gan')
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-media = await zeroyt7.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+media = await PutraBotz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
 ran = getRandom('.png')
 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) return reply(' Gagal, pada saat mengkonversi sticker ke gambar ')
 buffer = fs.readFileSync(ran)
-costum(buffer, image, Verived, `Jangan Lupa Subscribe Zero YT7`)
+costum(buffer, image, Verived, `Jangan Lupa Subscribe PutraBotz`)
 fs.unlinkSync(ran)
 })
 break
 case 'tomp3':
-zeroyt7.updatePresence(from, Presence.recording)
+PutraBotz.updatePresence(from, Presence.recording)
 if (!isQuotedVideo) return reply('Reply Video nya Tod')
 reply(mess.wait)
 encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-media = await zeroyt7.downloadAndSaveMediaMessage(encmedia, './database/media_user')
+media = await PutraBotz.downloadAndSaveMediaMessage(encmedia, './database/media_user')
 ran = getRandom('.mp4')
 exec(`ffmpeg -i ${media} ${ran}`, (err) => {
 fs.unlinkSync(media)
 if (err) return reply('Gagal, pada saat mengkonversi video ke mp3')
 bufferlkj = fs.readFileSync(ran)
-zeroyt7.sendMessage(from, bufferlkj, audio, { mimetype: 'audio/mp4', quoted: ftrol })
+PutraBotz.sendMessage(from, bufferlkj, audio, { mimetype: 'audio/mp4', quoted: ftrol })
 fs.unlinkSync(ran)
 })
 break
@@ -815,12 +815,12 @@ case 'tovideo':
 if (!isQuotedSticker) return reply('Reply stikernya')
 reply(mess.wait)
 anumedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-anum = await zeroyt7.downloadAndSaveMediaMessage(anumedia, './database/media_user')
+anum = await PutraBotz.downloadAndSaveMediaMessage(anumedia, './database/media_user')
 ran = getRandom('.webp')
 exec(`ffmpeg -i ${anum} ${ran}`, (err) => {
 fs.unlinkSync(anum)
 buffer = fs.readFileSync(ran)
-zeroyt7.sendMessage(from, buffer, video, { quoted: ftrol, caption: 'Done... Jangan Lupa Subscribe Zero YT7' })
+PutraBotz.sendMessage(from, buffer, video, { quoted: ftrol, caption: 'Done... Jangan Lupa Subscribe PutraBotz' })
 fs.unlinkSync(ran)
 })
 break
@@ -830,9 +830,9 @@ break
 case 'owner':
 let inilist = []
 for (let i of ownerNumber) {
-let vname = zeroyt7.contacts[i] != undefined ? zeroyt7.contacts[i].vname || zeroyt7.contacts[i].notify : undefined
+let vname = PutraBotz.contacts[i] != undefined ? PutraBotz.contacts[i].vname || PutraBotz.contacts[i].notify : undefined
 inilist.push({
-"displayName": 'ZeroYT7',
+"displayName": 'PutraBotz',
 "vcard": 'BEGIN:VCARD\n'
 + 'VERSION:3.0\n'
 + `FN:${ownername}\n`
@@ -841,7 +841,7 @@ inilist.push({
 + 'END:VCARD'.trim()
 })
 }
-hehe = await zeroyt7.sendMessage(from, {
+hehe = await PutraBotz.sendMessage(from, {
 "displayName": `${inilist.length} kontak`,
 "contacts": inilist 
 }, 'contactsArrayMessage', { quoted: ftrol })
@@ -856,12 +856,12 @@ button = [
     buttons: button,
     headerType: 1
 }
-await zeroyt7.sendMessage(from, buttons, MessageType.buttonsMessage, {quoted: ftrol})
+await PutraBotz.sendMessage(from, buttons, MessageType.buttonsMessage, {quoted: ftrol})
 break
 case 'bc':
 if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
 if (args.length < 1) return reply('Teksnya?')
-anu = await zeroyt7.chats.all()
+anu = await PutraBotz.chats.all()
 for (let _ of anu) {
 buttonss = [{buttonId: `${prefix}menu`, buttonText: {displayText: '☰ MENU'}, type: 1},{buttonId: `${prefix}sewabot`, buttonText: {displayText: '☰ SEWA BOT'}, type: 1}]
 const btnbc = {
@@ -870,7 +870,7 @@ footerText: '*SILAHKAN TEKAN BUTTON UNTUK INFORMASI LANJUT*',
 buttons: buttonss,
 headerType: 1
 }
-await zeroyt7.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: ftrol})
+await PutraBotz.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: ftrol})
 }
 reply(`Sukses mengirim Broadcast:\n${q}`)
 break
@@ -883,23 +883,23 @@ var options = {
 text: teks1,
 contextInfo: { mentionedJid: [nomor] },
 }
-zeroyt7.sendMessage(`6285157740529@s.whatsapp.net`, options, text, { quoted: ftrol })
+PutraBotz.sendMessage(`6285783026012@s.whatsapp.net`, options, text, { quoted: ftrol })
 reply('Masalah Telah Di Laporkan Ke Owner BOT, Mohon Tunggu Untuk Proses Perbaikan')
 break
 case 'youtube':
 teks =
-`Nih Youtube Owner Ku Jangan Lupa Di Subscribe Ya https://youtube.com/ZeroYT7`
-zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
+`Nih Youtube Owner Ku Jangan Lupa Di Subscribe Ya https://youtube.com/PutraBotz`
+PutraBotz.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'instagram':
 teks =
-`Nih Instagram Owner Ku Jangan Lupa Di Follow Ya https://instagram.com/Zero_YT7`
-zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
+`Nih Instagram Owner Ku Jangan Lupa Di Follow Ya https://instagram.com/PutraBotz`
+PutraBotz.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'tiktok':
 teks =
-`Nih Tiktok Owner Ku Jangan Lupa Di Follow Ya https://tiktok.com/@_zeroyt7`
-zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
+`Nih Tiktok Owner Ku Jangan Lupa Di Follow Ya https://tiktok.com/@_PutraBotz`
+PutraBotz.sendMessage(from, teks, text, {quoted: ftrol})
 break
 case 'sourcecode':
 case 'script':
@@ -907,13 +907,13 @@ case 'sc':
 teks = 
 `*Bot Ini Menggunakan Sourcecode*
 ╭─────────────────────
-├ Sc Ori = https://github.com/Zero-YT7/Base-ZeroYT7
-├ Sc Full Fitur = https://youtube.com/ZeroYT7
+├ Sc Ori = https://github.com/PutraBotz/Base-PutraBotz
+├ Sc Full Fitur = https://youtube.com/PutraBotz
 ├─────────────────────
-├ Creator Base = Zero YT7
-├ Creator Sc = Zero YT7
+├ Creator Base = PutraBotz
+├ Creator Sc = PutraBotz
 └─────────────────────`
-zeroyt7.sendMessage(from, teks, text, {quoted: ftrol})
+PutraBotz.sendMessage(from, teks, text, {quoted: ftrol})
 break
 
 //━━━━━━━━━━━━━━━[ INFO BOT ]━━━━━━━━━━━━━━━━━//
@@ -949,7 +949,7 @@ if (isOwner) {
 			} else if (budy.startsWith('x')) {
 				console.log(color('[EVAL2]'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`eval identy`))
 				try {
-					return zeroyt7.sendMessage(from, JSON.stringify(eval(budy.slice(2)), null, '\t'), text, { quoted: ftrol })
+					return PutraBotz.sendMessage(from, JSON.stringify(eval(budy.slice(2)), null, '\t'), text, { quoted: ftrol })
 				} catch (err) {
 					e = String(err)
 					reply(e)
