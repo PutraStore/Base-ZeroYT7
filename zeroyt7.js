@@ -131,7 +131,7 @@ module.exports = PutraBotz = async (PutraBotz, mek, _welkom) => {
         let mentions = (teks, memberr, id) => {
             (id == null || id == undefined || id == false) ? PutraBotz.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : PutraBotz.sendMessage(from, teks.trim(), extendedText, { quoted: ftrol, contextInfo: { "mentionedJid": memberr } })
         }
-        let zero = fs.readFileSync ('./PutraBotz/zerothumb.jpg')
+        let zero = fs.readFileSync ('./zeroyt7/zerothumb.jpg')
         let costum = (pesan, tipe, target, target2) => {
 			PutraBotz.sendMessage(from, pesan, tipe, { quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` } } })
 		}
@@ -229,7 +229,7 @@ var ase = new Date();
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./PutraBotz/zero.jpg'),
+                            "jpegThumbnail": fs.readFileSync('./zeroyt7/zero.jpg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     }
@@ -257,7 +257,7 @@ var ase = new Date();
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./PutraBotz/zero.jpg'),
+                            "jpegThumbnail": fs.readFileSync('./zeroyt7/zero.jpg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     }
@@ -373,7 +373,7 @@ if (isCmd && !isUser){
 
 switch (command) {
 	case 'menu':
-	gambar = fs.readFileSync('./PutraBotz/zero.jpg')
+	gambar = fs.readFileSync('./zeroyt7/zero.jpg')
                    timestamp = speed();
 				latensi = speed() - timestamp	
               menunya = 
